@@ -7,6 +7,10 @@ script:
 branches:
   only:
     - develop
-
+install:
+ -  - mvn dependency:resolve dependency:resolve-plugins
+ +  - mvn dependency:resolve
+script:
+  - mvn test jacoco:report org.eluder.coveralls:coveralls-maven-plugin:report
 after_success:
   - bash <(curl -s https://codecov.io/bash)
