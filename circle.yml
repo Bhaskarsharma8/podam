@@ -1,7 +1,3 @@
-machine:
-environment:
-GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
-
 test:
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
