@@ -230,15 +230,6 @@
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
 				<version>0.12</version>
-				<dependencyManagement> 
-				   *<dependencies>* 
-				        <dependency>
-    						<groupId>org.eclipse.mylyn.github</groupId>
-    						<artifactId>org.eclipse.egit.github.core.tests</artifactId>
-    						<version>3.1.0.201310021548-r</version>
-					</dependency>
-				   *</dependencies>* 
-				</dependencyManagement> 
 				<configuration>
 					<message>Creating site for ${project.version}</message>
 				</configuration>
@@ -250,6 +241,13 @@
 						<phase>site</phase>
 					</execution>
 				</executions>
+				 <dependencies> 
+				        <dependency>
+    						<groupId>org.eclipse.mylyn.github</groupId>
+    						<artifactId>org.eclipse.egit.github.core.tests</artifactId>
+    						<version>3.1.0.201310021548-r</version>
+					</dependency>
+				   </dependencies> 
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
